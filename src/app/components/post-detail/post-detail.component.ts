@@ -13,7 +13,7 @@ export class PostDetailComponent {
     constructor(private route: ActivatedRoute, private PostSvc: PostService) {}
 
     ngOnInit() {
-        this.route.paramMap.subscribe((params) => {
+        this.route.paramMap.subscribe((params: any) => {
             const postId = params.get('id');
             this.post = this.PostSvc.getPostById(postId);
         });
