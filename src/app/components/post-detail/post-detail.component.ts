@@ -9,13 +9,13 @@ import { PostService } from 'src/app/post.service';
     styleUrls: ['./post-detail.component.scss'],
 })
 export class PostDetailComponent {
-    post!: Post;
+    post!: Post | undefined;
     constructor(private route: ActivatedRoute, private PostSvc: PostService) {}
 
     ngOnInit() {
         this.route.paramMap.subscribe((params: any) => {
             const postId = params.get('id');
-            this.post = this.PostSvc.getPostById(postId);
+            if (postId) this.post = this.PostSvc.getPostById(Number(postId));
         });
     }
 }
