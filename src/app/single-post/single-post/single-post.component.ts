@@ -9,6 +9,7 @@ import { PostService } from 'src/app/post.service';
 })
 export class SinglePostComponent {
     posts: Post[] = [];
+
     constructor(private PostSvc: PostService) {}
 
     @Input() post!: Post;

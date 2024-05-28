@@ -10,6 +10,7 @@ import { InactivePostsComponent } from './components/inactive-posts/inactive-pos
 import { PostDetailComponent } from './components/post-detail/post-detail.component';
 import { SinglePostComponent } from './single-post/single-post/single-post.component';
 import { FormsModule } from '@angular/forms';
+import { PostDirective } from './post.directive';
 
 const routes: Route[] = [
     {
@@ -43,6 +44,7 @@ const routes: Route[] = [
         InactivePostsComponent,
         PostDetailComponent,
         SinglePostComponent,
+        PostDirective,
     ],
     imports: [BrowserModule, RouterModule.forRoot(routes), FormsModule],
     providers: [],

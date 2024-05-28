@@ -286,4 +286,8 @@ export class PostService {
     getAllPosts() {
         return this.post;
     }
+
+    filterPostsByTag(tag: string): Post[] {
+        return this.post.filter((post) => post.tags.includes(tag));
+    }
 }
