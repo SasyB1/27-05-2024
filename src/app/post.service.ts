@@ -287,6 +287,18 @@ export class PostService {
         return this.post;
     }
 
+    getUniqueTags(): string[] {
+        let TagsArr: string[] = [];
+        this.post.forEach((post) => {
+            post.tags.forEach((tag) => {
+                if (!TagsArr.includes(tag)) {
+                    TagsArr.push(tag);
+                }
+            });
+        });
+        return TagsArr;
+    }
+
     filterPostsByTag(tag: string): Post[] {
         return this.post.filter((post) => post.tags.includes(tag));
     }

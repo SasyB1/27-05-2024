@@ -71,7 +71,15 @@
         </div>
     </div>
 </div>
-
+<div class="row">
+    <div
+        class="col mt-1 btn btn-success me-2 ms-2"
+        *ngFor="let tag of tags"
+        (click)="filterPostsByTag(tag)"
+    >
+        {{ tag }}
+    </div>
+</div>
 <section class="row">
     <app-single-post #singlePost *ngFor="let post of posts" [post]="post">
         <div class="d-flex flex-column">
