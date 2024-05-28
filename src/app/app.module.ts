@@ -8,6 +8,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ActivePostsComponent } from './components/active-posts/active-posts.component';
 import { InactivePostsComponent } from './components/inactive-posts/inactive-posts.component';
 import { PostDetailComponent } from './components/post-detail/post-detail.component';
+import { SinglePostComponent } from './single-post/single-post/single-post.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Route[] = [
     {
@@ -40,8 +42,9 @@ const routes: Route[] = [
         ActivePostsComponent,
         InactivePostsComponent,
         PostDetailComponent,
+        SinglePostComponent,
     ],
-    imports: [BrowserModule, RouterModule.forRoot(routes)],
+    imports: [BrowserModule, RouterModule.forRoot(routes), FormsModule],
     providers: [],
     bootstrap: [AppComponent],
 })

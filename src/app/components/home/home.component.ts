@@ -17,5 +17,10 @@ export class HomeComponent {
     async ngOnInit() {
         this.post = await this.PostSvc.getTopPost();
         this.related = this.PostSvc.getRelated(4);
+        this.posts = await this.PostSvc.getAllPosts();
+    }
+
+    editPost() {
+        alert('Edit successful!');
     }
 }

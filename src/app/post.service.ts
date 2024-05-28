@@ -282,4 +282,8 @@ export class PostService {
     getPostById(id: number) {
         return this.post.find((post) => post.id === id);
     }
+
+    getAllPosts() {
+        return this.post;
+    }
 }
